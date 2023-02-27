@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int result=1,n,i=1;
+	printf("请输入一个正整数：");
+	scanf("%d",&n);
+	do
+	{
+		result=result*i;
+		i++;
+	}
+	while(i<=n);
+	printf("%d!=%d\n",n,result);
+	return 0;
+}
