@@ -1,13 +1,18 @@
 #include<stdio.h>
 int main()
 {
-	int x,y,z;
+	int x,y,z,count;
 	for(x=0;x<=20;x++)
 		for(y=0;y<=33;y++)
-			for(z=0;z<=100;z++)
 			{
-				if((x+y+z==100)&&(5*x+3*y+z/3.0==100))
+				z=100-x-y; 
+				if(5*x+3*y+z/3==100)
+				{
+				count++;
 				printf("公鸡%d只，母鸡%d只，小鸡%d只\n",x,y,z);
+				}
 			}
+		if(count==0)
+		printf("无解！");
 	return 0;
 }
